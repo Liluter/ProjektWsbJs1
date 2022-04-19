@@ -1,0 +1,246 @@
+:root {
+    --marg1: 0px;
+    --marg2: 20px;
+    --main-color: rgba(4, 163, 255, 0.623);
+}
+/* Style reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(./assets/img/clouds_1920.jpg) top center;
+    background-repeat: no-repeat;
+    min-width: 360px;
+    background-size: cover;
+}
+
+.container {
+    width: calc(100% - 2 * var(--marg1));
+    height: calc(100% - 2 * var(--marg1));
+    background-color: var(--main-color);
+    filter: opacity(1);
+    margin: var(--marg1);
+    padding: 0;
+    min-width: 360px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start; */
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 114px 1fr 114px;
+    /* row-gap :10px; */
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: left;
+    width: calc(100% - 2 * var(--marg2));
+    height: 74px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    margin: var(--marg2);
+    min-width: 320px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    margin: 20px;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    flex: 4;
+    margin-right: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menu li {
+    margin-left: 12px;
+    display: flex;
+}
+
+li .avatar {
+    margin-left: 24px;
+}
+li .location-weather {
+    margin-left: 20px;
+}
+
+.location-time,
+.location-weather {
+    font-family: "DejaVu Sans Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    align-items: center;
+    color: #2b518b;
+}
+.btn-login {
+    background: #7d92b3;
+    border-radius: 5px;
+    width: 64px;
+    height: 32px;
+    border: none;
+    color: #e5e5e5;
+}
+.btn-login:hover {
+    background: #e5e5e5;
+    border-radius: 5px;
+    width: 64px;
+    height: 32px;
+    border: 1px #7d92b3 solid;
+    color: #7d92b3;
+}
+
+.main {
+    margin-left: 20px;
+    grid-column: 1 / 2;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+}
+.aside {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 20px;
+    grid-column: 2 / 3;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 500px;
+    min-height: 200px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    margin: 40px 58px 40px 40px;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    padding: 26px;
+}
+.aside-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(56, 220, 231, 0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    gap: 18px;
+}
+
+.footer {
+    background-color: rgb(18, 207, 11);
+    /* filter: opacity(0.5); */
+    width: calc(100% - 2 * var(--marg2));
+    height: 74px;
+    background: #e5e5e5;
+    border-radius: 10px;
+    margin: var(--marg2);
+    min-width: 320px;
+    grid-column: 1 / span 2;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 200px;
+    height: 50px;
+    background: #cedee7;
+    border: 1px solid #2b518b;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: "DejaVu Sans Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    align-items: center;
+    color: #2b518b;
+}
+
+.btn.accept {
+    background: #7d92b3;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #e5e5e5;
+    font-size: 1.4em;
+}
+.btn.accept:hover {
+    background:  #0F68EE;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #e5e5e5;
+    font-size: 1.4em;
+}
+
+.btn img {
+    width: 25px;
+}
+.btn.passangers img {
+    width: 34px;
+}
+
+.sign {
+    height: 50px;
+}
+
+.sign img {
+    width: 75px;
+}
+
+.numPass {
+    width: 28px;
+    height: 28px;
+    background-color: #e5e5e5;
+    border: 1px solid #2b518b;
+    border-radius: 5px;
+    font-family: "DejaVu Sans Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b518b;
+}
+
+/* main content */
+
+.main-content .sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer {
+    font-family: "DejaVu Sans Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b518b;
+}
